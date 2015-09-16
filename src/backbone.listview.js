@@ -2,7 +2,7 @@ import _ from 'underscore';
 import Backbone from 'backbone';
 
 function toModel(view) {
-  return { view: view };
+  return {view};
 }
 
 function toModels(views) {
@@ -19,10 +19,10 @@ const ListView = Backbone.View.extend({
     this._views = [];
 
     this.listenTo(this.views, {
-      add    : this._onViewCollectionAdd,
-      remove : this._onViewCollectionRemove,
-      reset  : this._onViewCollectionReset,
-      sort   : this._onViewCollectionSort
+      add: this._onViewCollectionAdd,
+      remove: this._onViewCollectionRemove,
+      reset: this._onViewCollectionReset,
+      sort: this._onViewCollectionSort
     });
 
     Backbone.View.apply(this, arguments);
